@@ -5,10 +5,10 @@ public class SingletonCommand{
     private static Command single_instance = null;
 
     // variable of type String
-    public String s;
+    private String s;
 
     // private constructor restricted to this class itself
-    private SingletonCommand()
+    public SingletonCommand()
     {
         s = "Hello I am a string part of Singleton class";
     }
