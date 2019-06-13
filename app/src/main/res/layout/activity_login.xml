@@ -12,11 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="342dp"
-        android:text="Connect"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="200dp"
         android:background="@android:color/holo_green_light"
-        />
+        android:text="Connect" />
 
     <TextView
         android:id="@+id/portTextView"
