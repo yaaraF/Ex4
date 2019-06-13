@@ -12,10 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="450dp"
-        android:layout_marginBottom="200dp"
         android:background="@android:color/holo_green_light"
         android:text="Connect" />
 
@@ -38,7 +36,7 @@
 
     <EditText
         android:id="@+id/portTextBox"
-        android:layout_width="262dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ipTextBox"
         android:layout_alignParentEnd="true"
@@ -70,7 +68,7 @@
 
     <EditText
         android:id="@+id/ipTextBox"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/ipTextView"
         android:layout_alignParentEnd="true"
@@ -81,9 +79,8 @@
         android:layout_marginRight="22dp"
         android:layout_toEndOf="@+id/ipTextView"
         android:layout_toRightOf="@+id/ipTextView"
-        android:ems="10"
-        android:inputType="textPersonName"
         android:background="@android:color/background_light"
-        />
+        android:ems="10"
+        android:inputType="textPersonName" />
 
 </RelativeLayout>

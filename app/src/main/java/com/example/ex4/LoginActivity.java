@@ -37,13 +37,13 @@ public class LoginActivity extends AppCompatActivity {
                 port =  Integer.parseInt(portText.getText().toString());
 
 
-                SingletonCommand.getInstance().Connect(ip,port);
+               // SingletonCommand.getInstance().Connect(ip,port);
 
                 //Connect(ip,port);
 
 
 
-                //openJoystickActivity();
+                openJoystickActivity();
              }
         });
 
@@ -71,9 +71,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-   /* public void openJoystickActivity() {
+    public void openJoystickActivity() {
         Intent intent = new Intent(this, JoystickActivity.class);
         startActivity(intent);
     }
-    */
+
 }
