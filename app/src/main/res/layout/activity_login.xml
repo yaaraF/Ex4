@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@android:color/holo_purple"
     tools:context=".LoginActivity">
 
     <Button
@@ -14,7 +14,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="342dp"
-        android:text="Connect" />
+        android:text="Connect"
+        android:background="@android:color/holo_green_light"
+        />
 
     <TextView
         android:id="@+id/portTextView"
@@ -35,18 +37,19 @@
 
     <EditText
         android:id="@+id/portTextBox"
-        android:layout_width="wrap_content"
+        android:layout_width="262dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ipTextBox"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="82dp"
-        android:layout_marginLeft="82dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="67dp"
         android:layout_marginEnd="22dp"
         android:layout_marginRight="25dp"
         android:layout_toEndOf="@+id/portTextView"
         android:layout_toRightOf="@+id/portTextView"
+        android:background="@android:color/background_light"
         android:ems="10"
         android:inputType="textPersonName" />
 
@@ -78,6 +81,8 @@
         android:layout_toEndOf="@+id/ipTextView"
         android:layout_toRightOf="@+id/ipTextView"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:background="@android:color/background_light"
+        />
 
 </RelativeLayout>
