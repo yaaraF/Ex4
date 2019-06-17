@@ -22,6 +22,14 @@ public class Command {
     protected Socket socket;
     private PrintWriter mBufferOut;
     private Map<String,String> simolatorPlace;
+    private String ip;
+    private int port;
+
+    public void setIPAndPort(String ip,int port){
+        this.ip = ip;
+        this.port = port;
+
+    }
 
 
     private void InitTheMap(){
@@ -35,7 +43,7 @@ public class Command {
     }
 
 
-    public void Connect(final String ip, final int port) {
+    public void Connect() {
 
         this.runable = new Runnable(){
             @Override

@@ -36,23 +36,13 @@ public class LoginActivity extends AppCompatActivity {
                 ip = ipText.getText().toString();
                 port =  Integer.parseInt(portText.getText().toString());
 
-
-               SingletonCommand.getInstance().Connect(ip,port);
-
-
-
-
+                SingletonCommand.getInstance().setIPAndPort(ip,port);
 
                 openJoystickActivity();
              }
         });
 
 
-    }
-    @Override
-    protected void onDestroy(){
-        super.onDestroy();
-        SingletonCommand.getInstance().close();
     }
 
 
