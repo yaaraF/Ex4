@@ -16,8 +16,7 @@ import java.util.Map;
 import static android.content.ContentValues.TAG;
 
 public class Command {
-    String ip;
-    int port;
+
     private Thread thread;
     private Runnable runable;
     protected Socket socket;
@@ -45,7 +44,8 @@ public class Command {
                     try {
                         InetAddress serverAddr = InetAddress.getByName(ip);
                         socket = new Socket(serverAddr, port);
-                        mBufferOut = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
+                        mBufferOut = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()))
+                                , true);
                     } catch (IOException e) {
                         Log.e("TCP", "C: Error", e);
                         System.out.println(e.toString());
@@ -73,6 +73,20 @@ public class Command {
         Thread thread = new Thread(runnable);
         thread.start();
     }
+
+    public void close() {
+        if(this.socket!=null) {
+            try {
+                this.socket.close();
+                this.mBufferOut.close();
+            } catch (IOException e) {
+                Log.e("TCP", "C: Error", e);
+                System.out.println((e.toString()));
+            }
+        }
+    }
+
+
 
 
 }

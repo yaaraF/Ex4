@@ -37,9 +37,9 @@ public class LoginActivity extends AppCompatActivity {
                 port =  Integer.parseInt(portText.getText().toString());
 
 
-               // SingletonCommand.getInstance().Connect(ip,port);
+               SingletonCommand.getInstance().Connect(ip,port);
 
-                //Connect(ip,port);
+
 
 
 
@@ -49,25 +49,10 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
-
-    public void Connect(String ip1,int port1) {
-
-        Runnable runable = new Runnable(){
-            @Override
-            public void run(){
-
-                try {
-                    InetAddress serverAddr = InetAddress.getByName("10.0.2.2");
-                    Socket socket = new Socket(serverAddr, 5402);
-                } catch (IOException e) {
-                    Log.e("TCP", "C: Error", e);
-                    System.out.println(e.toString());
-                }
-
-            }
-        };
-        Thread thread = new Thread(runable);
-        thread.start();
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        SingletonCommand.getInstance().close();
     }
 
 
